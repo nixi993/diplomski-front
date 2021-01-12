@@ -184,12 +184,19 @@ class DetaljiNalogaModal extends React.Component {
 
                         </Form.Row>
                         <Form.Row>
+
                             <Form.Group as={Col} controlId="formGridStatus">
                                 <Form.Label>Status</Form.Label>
-                                <Form.Control
+                                <Form.Control as="select"
+                                    onChange={this.handleChange}
                                     name="status"
                                     defaultValue={this.props.status}
-                                    placeholder="Status" />
+                                >
+                                    <option value="Zaprimljeno">Zaprimljeno</option>
+                                    <option value="Na dizalici">Na dizalici</option>
+                                    <option value="Čeka dijelove">Čeka dijelove</option>
+                                    <option value="Završeno">Završeno</option>
+                                </Form.Control>
                             </Form.Group>
 
                             <Form.Group as={Col} controlId="formGridDatumZaprimanja">
